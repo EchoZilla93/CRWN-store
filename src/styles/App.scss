@@ -1,1 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap');
 @import "./homepage.scss";
+@import "./menu-item.scss";
+@import "./directory.scss";
+
+
+body{
+    font-family: 'Open Sans Condensed', sans-serif;
+}
