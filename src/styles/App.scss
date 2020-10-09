@@ -2,8 +2,11 @@
 @import "./homepage.scss";
 @import "./menu-item.scss";
 @import "./directory.scss";
+@import "./previewCollection.scss";
+@import "./collectionItem.scss";
 
 
 body{
     font-family: 'Open Sans Condensed', sans-serif;
+    padding: 20px 60px;
 }
