@@ -8,10 +8,10 @@ const PrevCollection = ({title,items}) => (
             {
                 items
                 .filter((item,idx)=> idx < 4)
-                .map(({id, ...otherItemProps}) => {
+                .map((item) => {
                     return(
-                        <CollectionItem key={id}
-                        {...otherItemProps}
+                        <CollectionItem key={item.id}
+                        item={item}
                         />
                     );
                 })

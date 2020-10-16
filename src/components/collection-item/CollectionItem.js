@@ -1,6 +1,12 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
-const CollectionItem = ({id,name,price,imageUrl}) => (
+import Button from '../button/Button';
+import { addItem } from '../../redux/actions';
+
+const CollectionItem = ({item,addItem}) => {
+    const {id,name,price,imageUrl} = item;
+    return (
     <div className="collection-item">
         <div 
         className="image"
@@ -10,7 +16,14 @@ const CollectionItem = ({id,name,price,imageUrl}) => (
                 <span className="name">{name}</span>
                 <span className="price">{price} $</span>
             </div>
+            <Button 
+            onClick={() => addItem(item)} 
+            inverted>ADD TO CART</Button>
         </div>
-)
+)};
 
-export default CollectionItem;
+const mapDispatchToProps = dispatch => ({
+    addItem: item => dispatch(addItem(item))
+})
+
+export default connect(null,mapDispatchToProps)(CollectionItem);
